@@ -14,12 +14,10 @@ services:
       - 8000:8000
     depends_on:
       - database
-    volumes:
-      - ./backend:/app/src
   frontend:
     build:
       context: ./frontend
-      dockerfile: ./frontend/Dockerfile
+      dockerfile: Dockerfile
     depends_on:
       - backend
   database:
@@ -36,3 +34,4 @@ services:
 
 volumes:
   pgdb:
+
