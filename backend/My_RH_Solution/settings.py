@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "crud",
-    
+    "rest_framework",
+        
 ]
 
 MIDDLEWARE = [
@@ -77,12 +78,12 @@ WSGI_APPLICATION = "My_RH_Solution.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": "rh_solution",
-        "USER": "root",
+        "USER": "postgres",
         "PASSWORD": "0000",
-        "HOST": "database",  # Le nom du service du conteneur de la base de données dans Docker Compose
-        "PORT": "3306",  # Le port sur lequel la base de données est exposée
+        "HOST": "localhost",
+        "PORT": "5432",  # Le port sur lequel la base de données est exposée
     }
 }
 
