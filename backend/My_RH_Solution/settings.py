@@ -77,10 +77,15 @@ WSGI_APPLICATION = "My_RH_Solution.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "rh_solution",
+        "USER": "root",
+        "PASSWORD": "0000",
+        "HOST": "database",  # Le nom du service du conteneur de la base de données dans Docker Compose
+        "PORT": "3306",  # Le port sur lequel la base de données est exposée
     }
 }
+
 
 
 # Password validation
